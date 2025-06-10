@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.tartur.capco'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation platform('org.assertj:assertj-bom:3.26.3')
+    testImplementation platform('org.mockito:mockito-bom:5.15.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'org.mockito:mockito-core'
+}
+
+test {
+    useJUnitPlatform()
+}
