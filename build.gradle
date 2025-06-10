@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 group = 'com.tartur.capco'
@@ -20,4 +20,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+run {
+    standardInput = System.in
+}
+application {
+    mainClass='com.tartur.capco.application.CLIApplication'
 }
